@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Having fun with Typescript, ThreeJS and Ammo.js</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="A Simple 3D Game developed with Typescript, ThreeJS and Ammo.js">
+		<style>
+			body {color: #000;font-family:Monospace;text-align:center;background-color:#bfd1e5;margin:0px;overflow:hidden;font-size:150%}
+			#message{position:absolute;width:100%;top:0;padding-top:1em;color:#777;font-size:80%}
+			#blocker{position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,0.65);padding-top:10em;color:#FFF;text-shadow:1px 1px 20px #000}
+			[hidden]{display:none}
+			div.info{color:#BBB;font-size:80%}
+			a {color:#b7bd6f;cursor:pointer}
+		</style>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-1184701-9', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="message" hidden>
+			Mouse and W, A, S, D = move<br/>
+			CLICK = shoot balls<br/>
+			Press ESC to pause
+		</div>
+		<div id="errorMessage" hidden>
+			<b>Mouse move is disabled: your browser doesn't support the Pointer Lock API.</b><br/>
+			Use W, A, S, D keys to move<br/>
+			CLICK = shoot balls
+		</div>
+		<div id="blocker">
+			<span style="font-size:250%">Click to play</span>
+			<br/><br/>
+			Mouse and W, A, S, D = move<br/>
+			CLICK = shoot balls<br/>
+			Press ESC to pause
+			<br/><br/><br/><br/>
+			<div class="info">
+				Developed with Typescript, ThreeJS and Ammo.js
+				<br/><br/>
+				Author: <a href="https://www.linkedin.com/in/hugovteixeira" target="_new">Hugo Teixeira</a>
+				| <a href="https://componenthouse.com/2016/11/08/having-fun-with-typescript-threejs-and-ammo-js/" target="_new">Read Full Article</a>
+				| <a href="https://bitbucket.org/HugoTeixeira/webgl-shooter" target="_new">Source Code</a>
+			</div>
+		</div>
+		<div id="container">Loading...</div>
+		<script src="js/three.js"></script>
+		<script src="js/ammo.js"></script>
+		<script src="js/detector.js"></script>
+		<script src="js/stats.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
